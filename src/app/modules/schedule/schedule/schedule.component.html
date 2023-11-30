@@ -1,0 +1,29 @@
+<div class="d-flex flex-column justify-content-center gap-3">
+    <form [formGroup]="formSelectDate" class="d-flex justify-content-center gap-3">
+        <mat-form-field>
+            <mat-label>Selecciona el día</mat-label>
+            <mat-select formControlName="weekday">
+                <mat-option *ngFor="let weekday of weekdays" [value]="weekday">{{ weekday }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field *ngIf="formSelectDate.get('weekday')?.valid">
+            <mat-label>Selecciona la hora inicial</mat-label>
+            <mat-select formControlName="hourDayInit">
+                <mat-option *ngFor="let hourDay of hoursDayInitCopy" [value]="hourDay">{{ hourDay }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field *ngIf="formSelectDate.get('hourDayInit')?.valid && enableHourEnd">
+            <mat-label>Selecciona la hora final</mat-label>
+            <mat-select formControlName="hourDayEnd">
+                <mat-option *ngFor="let hourDay of hoursDayEndCopy" [value]="hourDay">{{ hourDay }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <div class="d-flex justify-content-center">
+        <button class="button-form" mat-flat-button color="primary" (click)="confirmSchedule()" [disabled]="!formSelectDate.valid">Agendar cita</button>
+    </div>
+</div>
+
+

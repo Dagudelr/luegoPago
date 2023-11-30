@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  apiEndPoint: 'http://localhost:8010/proxy/luegopago-uploads/Pruebas%20LuegoPago/data.json',
   production: false
 };
 
