@@ -9,3 +9,5 @@ Antes de inicializar utlizar el comando "lcp --proxyUrl https://luegopago.blob.c
 Luego realizar el comando ng serve desde otra terminar.
 
 abrur en http://localhost:4200
+
+nota: tener angular cli versión 12lts y node en versión ^12.14.0 || ^14.15.0
