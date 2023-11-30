@@ -1,2 +1,2 @@
 # luegoPago
-Repositorio para prueba técnica
+Ir a rama master
